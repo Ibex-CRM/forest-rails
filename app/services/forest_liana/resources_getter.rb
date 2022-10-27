@@ -184,8 +184,9 @@ module ForestLiana
           raise ForestLiana::Errors::LiveQueryError.new(error_message)
         end
       end
-p @records
+      p @records
       @records = search_query
+      p @records
     end
 
     def association?(field)
