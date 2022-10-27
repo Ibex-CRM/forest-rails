@@ -31,7 +31,7 @@ module ForestLiana
 
         getter = ForestLiana::ResourcesGetter.new(@resource, params, forest_user)
         getter.perform
-
+        p getter
         respond_to do |format|
           format.json { render_jsonapi(getter) }
           format.csv { render_csv(getter, @resource) }
