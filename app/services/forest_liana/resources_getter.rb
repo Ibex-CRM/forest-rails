@@ -161,7 +161,7 @@ module ForestLiana
 
     def prepare_query
       @records = get_resource
-
+      p @records
       if @segment && @segment.scope
         @records = @records.send(@segment.scope)
       elsif @segment && @segment.where
