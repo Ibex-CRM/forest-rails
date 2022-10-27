@@ -184,7 +184,7 @@ module ForestLiana
           raise ForestLiana::Errors::LiveQueryError.new(error_message)
         end
       end
-
+p @records
       @records = search_query
     end
 
