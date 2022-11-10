@@ -42,7 +42,7 @@ module ForestLiana
     def serialize_models(records, options = {}, fields_searched = [])
       options[:is_collection] = true
       json = ForestAdmin::JSONAPI::Serializer.serialize(records, options)
-
+puts json
       if options[:params] && options[:params][:search]
         # NOTICE: Add the Smart Fields with a 'String' type.
         fields_searched.concat(get_collection.string_smart_fields_names).uniq!
